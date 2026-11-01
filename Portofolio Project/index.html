@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ahmed Saad | Front-End Developer</title>
+  <!-- أيقونة التبويب (Favicon) -->
+<link rel="icon" href="assets/svg/ahmed3.svg" type="image/svg+xml">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="logo-accent">&lt;</span>Ahmed Saad<span class="logo-accent"> /&gt;</span>
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#my-works">My Works</a></li>
+        <li><a href="#contact-me">Contact</a></li>
+      </ul>
+      <!-- زر الوضع الداكن/الفاتح -->
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <span class="icon">🌙</span>
+      </button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-sub">
+      <h1 class="name">I'm <span class="gradient-text">Ahmed</span></h1>
+      <h1 class="title">Computer Science Student</h1>
+      <p class="hero-desc">Front-End Developer & UI Crafting Enthusiast</p>
+      <div class="hero-buttons">
+        <a class="hire-me" href="#contact-me">Hire me</a>
+        <a class="cv" href="assets/CV.pdf" download>
+          Download CV
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-img-container">
+      <img src="assets/imgs/me.jpg" alt="Ahmed Saad" class="hero-img">
+    </div>
+  </section>
+
+  <section class="about-me" id="about-me">
+    <div class="about-me-img-container">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop" alt="Coding Workspace" class="about-me-img">
+    </div>
+    <div class="text-container">
+      <div class="text-title">
+        <h2 class="about-name">About <span class="gradient-text">me</span></h2>
+      </div>
+      <p class="about-me-p">
+        Hey, I'm Ahmed, a Computer Science student and Front-End Developer passionate about building sleek web applications, responsive interfaces, and clean user experiences.
+      </p>
+    </div>
+  </section>
+
+  <section class="works" id="my-works">
+    <div class="works-container">
+      <div class="project-title">
+        <h2>My Recent <span class="gradient-text">Works</span></h2>
+      </div>
+      <ul class="projects-grid">
+        <!-- مشروع 1 -->
+        <li class="project-card coming-soon-card">
+          <div class="card-img-wrapper">
+            <div class="coming-soon-placeholder">
+              <span class="icon">🚀</span>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Web Application</h3>
+            <p>Front-End Development</p>
+          </div>
+        </li>
+
+        <!-- مشروع 2 -->
+        <li class="project-card coming-soon-card">
+          <div class="card-img-wrapper">
+            <div class="coming-soon-placeholder">
+              <span class="icon">⚡</span>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>Interactive Dashboard</h3>
+            <p>JavaScript & APIs</p>
+          </div>
+        </li>
+
+        <!-- مشروع 3 -->
+        <li class="project-card coming-soon-card">
+          <div class="card-img-wrapper">
+            <div class="coming-soon-placeholder">
+              <span class="icon">🎨</span>
+              <span class="badge">Coming Soon</span>
+            </div>
+          </div>
+          <div class="card-info">
+            <h3>E-Commerce UI</h3>
+            <p>Responsive Design</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="contact-me" id="contact-me">
+    <div class="contact-container">
+      <div class="contact-title">
+        <h2>Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-cards">
+        <a href="mailto:ahmedsaad.code@gmail.com" class="contact-item">
+          <span class="contact-icon">📧</span>
+          <h3>ahmedsaad.code@gmail.com</h3>
+        </a>
+        <a href="tel:+201144569331" class="contact-item">
+          <span class="contact-icon">📱</span>
+          <h3>+201144569331</h3>
+        </a>
+      </div>
+      <div class="social-media">
+        <a href="https://www.linkedin.com/in/ahmedsaad2026/" target="_blank" rel="noopener noreferrer" title="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/ahmedsaad2025" target="_blank" rel="noopener noreferrer" title="GitHub">GitHub</a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" title="X">X (Twitter)</a>
+        <a href="https://www.youtube.com/@pov_ahmed_saad" target="_blank" rel="noopener noreferrer" title="YouTube">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© Built with ❤️ by Ahmed Saad</p>
+  </footer>
+
+  <!-- Script للتحكم في الوضع الداكن والفاتح -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const htmlElem = document.documentElement;
+
+    toggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlElem.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlElem.setAttribute('data-theme', newTheme);
+      toggleBtn.querySelector('.icon').textContent = newTheme === 'dark' ? '🌙' : '☀️';
+    });
+  </script>
+</body>
+</html>
